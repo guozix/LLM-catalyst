@@ -1,0 +1,5 @@
+numpy
+datasets==1.15.1
+transformers==4.11.3
+tqdm==4.62.3
+seqeval==1.2.2
