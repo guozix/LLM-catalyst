@@ -4,7 +4,7 @@ Official pytorch implementation of **Two Optimizers Are Better Than One: LLM Cat
 
 <!-- [[arxiv](https://arxiv.org/)]  -->
 
-<!-- [![arXiv](https://img.shields.io/badge/arXiv-2403.05438-b31b1b.svg)](https://arxiv.org/abs/) -->
+[![arXiv](https://img.shields.io/badge/arXiv-2405.19732-b31b1b.svg)](https://arxiv.org/abs/)
 
 <center>
 <img src="./assets/figure_m.png">
@@ -12,7 +12,7 @@ Official pytorch implementation of **Two Optimizers Are Better Than One: LLM Cat
 
 We proposed a combined optimization method that integrates LLM-based optimizer with conventional gradient-based optimization. We validated our combined optimization strategy through prompt tuning tasks, where the synergy between LLM-based optimizer and gradient-based optimizer has consistently demonstrated improved performance over competitive baselines.
 
-For more details, please see the [paper](https://arxiv.org/).
+For more details, please see the [paper](https://arxiv.org/abs/2405.19732).
 
 Contact us with zixian_guo@foxmail.com
 
@@ -75,13 +75,25 @@ After training, check the improvements brought by our method by comparing the re
 Traning scripts for other datasets can be found in `./exp_lm/run_script/`.
 
 
-### 2. Image classification tasks
+<!-- ### 2. Image classification tasks -->
 
 
 ## Citation
 
 ```bibtex
-
+@misc{guoTwoOptimizersAre2024,
+  title = {Two Optimizers Are Better Than One: LLM Catalyst for Enhancing Gradient-Based Optimization},
+  shorttitle = {Two Optimizers Are Better Than One},
+  author = {Guo, Zixian and Liu, Ming and Ji, Zhilong and Bai, Jinfeng and Guo, Yiwen and Zuo, Wangmeng},
+  year = {2024},
+  month = may,
+  number = {arXiv:2405.19732},
+  eprint = {2405.19732},
+  primaryclass = {cs},
+  publisher = {arXiv},
+  urldate = {2024-05-31},
+  archiveprefix = {arxiv}
+}
 ```
 
 ## Acknowledgement
