@@ -2,8 +2,6 @@
 
 Official pytorch implementation of **Two Optimizers Are Better Than One: LLM Catalyst for Enhancing Gradient-Based Optimization**.
 
-<!-- [[arxiv](https://arxiv.org/)]  -->
-
 [![arXiv](https://img.shields.io/badge/arXiv-2405.19732-b31b1b.svg)](https://arxiv.org/abs/2405.19732)
 
 <center>
@@ -49,15 +47,21 @@ pip install -r requirements.txt
 
 ### 2. Datasets
 
-The datasets of SuperGLUE will be organized by `datasets`.
+The datasets of SuperGLUE will be organized by huggingface `datasets`.
 
-The image classfication datasets are prepared according to [].
+The image classfication datasets are prepared according to  [DATASETS.md](https://github.com/KaiyangZhou/CoOp/blob/main/DATASETS.md) to prepare the datasets.
+Chage the variable `DATA` in the training scripts `main.sh` to your dataset directory.
 
 ### 3. LLM API
 
+Prepare your OpenAI KEY in `Line 6: exp_lm/chatgpt_hk.py`
+
+```
+api_key = "your api key"
+```
 
 ## Usage
-### 1. NLU tasks
+### NLU tasks
 
 Prompt tuning baseline results (take COPA dataset as an example):
 ```

@@ -1,53 +1,19 @@
 import requests
 import json
 import os
+import openai
 
-url = "https://api.openai-hk.com/v1/chat/completions"
+api_key = "your api key"
+openai.api_key = api_key
 
-headers = {
-    "Content-Type": "application/json",
-    "Authorization": "hk-xmv49q1000012029eb643fec7cff736180c76930a0f98676"
-}
 
 def query_chatgpt(msg, model_id, if_prompt=False, temperature=0.8):
-    if if_prompt:
-        data = {
-            "max_tokens": 1200,
-            "model": model_id,
-            "temperature": temperature,
-            "top_p": 1,
-            "presence_penalty": 1,
-            "messages": [
-                {
-                    "role": "system",
-                    "content": "You are ChatGPT, a large language model trained by OpenAI. Answer as concisely as possible."
-                },
-                {
-                    "role": "user",
-                    "content": msg
-                }
-            ]
-        }
-    else:
-        data = {
-            "max_tokens": 1200,
-            "model": model_id,
-            "temperature": temperature,
-            "top_p": 1,
-            "presence_penalty": 1,
-            "messages": [
-                {
-                    "role": "user",
-                    "content": msg
-                }
-            ]
-        }
+    completion = openai.ChatCompletion.create(
+        model=model_id,
+        messages=[{"role": "user", "content": msg}]
+    )
+    return completion
 
-    response = requests.post(url, headers=headers, data=json.dumps(data).encode('utf-8') )
-    result = response.content.decode("utf-8")
-    result = json.loads(result)
-
-    return result
 
 # dummy parse function
 def parse_prompt(result):
