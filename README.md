@@ -4,7 +4,7 @@ Official pytorch implementation of **Two Optimizers Are Better Than One: LLM Cat
 
 <!-- [[arxiv](https://arxiv.org/)]  -->
 
-[![arXiv](https://img.shields.io/badge/arXiv-2405.19732-b31b1b.svg)](https://arxiv.org/abs/)
+[![arXiv](https://img.shields.io/badge/arXiv-2405.19732-b31b1b.svg)](https://arxiv.org/abs/2405.19732)
 
 <center>
 <img src="./assets/figure_m.png">
